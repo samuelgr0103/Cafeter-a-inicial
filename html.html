@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="inside_coffee_shop.png">
+    <title>Cafeteria Triple Expresso</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <img class="logo" src="logo_coffeeshop_dark.svg" alt="Logo">
+            <ul class="nav-links">
+                <li><a class="reserva" href="#">Reservar una mesa</a></li>
+                <li><a class="contactos" href="#">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <h1 class="header-title">
+            <span>Café de especialidad</span><br>
+            en Triple Peaks
+        </h1>
+        <p class="header-description">
+            ¡Te damos la bienvenida a nuestra zona de estudio!
+            Aquí tenemos café para darte energía y motivar tu creatividad.
+        </p>
+
+        <img class="header-image" src="inside_coffee_shop.png" alt="Cafetería ilustración">
+
+
+
+        <div class="header__info">
+            <div class="header__hours">
+                <P class="info__text">Horario:
+                </P>
+                <p class="info__text">Lunes a Viernes (10:00h a 19:00h)</p>
+                <p class="info__text">Sábados y Domingos (11:00h a 18:00h)</p>
+
+            </div>
+            <p class="header__text">Avenida del Éxito 200,Ciudad de Triple Peaks</p>
+        </div>
+
+    </header>
+
+    <main>
+        <main class="content">
+
+            <!-- ===== RESERVATION SECTION ===== -->
+            <section class="reservation">
+                <h2>Reservar una mesa</h2>
+
+                <form class="reservation-form">
+                    <label>
+                        Nombre *
+                        <input type="text" placeholder="Nombre" required>
+                    </label>
+
+                    <label>
+                        Número de comensales *
+                        <input type="number" min="1" max="8" placeholder="1-8" required>
+                    </label>
+
+                    <label>
+                        Fecha y hora *
+                        <input id="fechaHoy" type="date" min="2026-02-01" required>
+                        <script>
+                            const input = document.getElementById('fechaHoy')
+                            const hoy = new Date().toISOString().split('T')[0]
+                            input.value = hoy
+                        </script>
+                    </label>
+
+                    <label>
+                        Tu correo electrónico *
+                        <input type="email" placeholder="email@email.com" required>
+                    </label>
+
+                    <button type="submit">Reservar una mesa</button>
+
+                    <label class="terms" id="terminos">
+                        <input type="checkbox" required>
+                        Acepto los términos de uso
+                    </label>
+                </form>
+            </section>
+
+        </main>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <div class="footer-logo">
+            </div>
+
+            <div class="social">
+                <p>Redes sociales</p>
+                <a href="#" class="social-link">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    Facebook
+                </a>
+
+                <a href="#" class="social-link">
+                    <i class="fa-brands fa-instagram"></i>
+                    Instagram
+                </a>
+            </div>
+            <p class="copy">© 2026 Samuel Garcia</p>
+
+
+        </footer>
+
+</body>
+
+</html>
